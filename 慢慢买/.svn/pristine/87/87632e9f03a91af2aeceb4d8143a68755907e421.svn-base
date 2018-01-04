@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商城导航页</title>
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet/less" href="./less/citynav.less">
+    <script src="./lib/less/less.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+        <i class="glyphicon glyphicon-menu-left"></i>
+        <h1>商城导航</h1>
+        <img class="download" src="images/header_app.png" alt="">
+    </header>
+    <main id="main">
+        <div class="classm link clearfix">
+            <!-- <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a>
+            <a href="#">
+                <img src="http://sf.manmanbuy.com/images/sitelogo/1.png" alt="">
+                 京东商城
+            </a> -->
+
+        </div>
+
+    </main>
+    <div id="menu" class="nav">
+        <a href="./manmanbuy.html">首页</a>&nbsp>&nbsp
+        <a href="./citynav.html">商城导航</a>
+        
+    </div>
+    <footer id="footer">
+
+        <div class="footer-top ">
+            <div class="row ">
+                <div class="col-xs-7 ">
+                    <a class="col-xs-6" href="#">登录</a>
+                    <a class="col-xs-6 " href="#">注册</a>
+                </div>
+
+                <a href="#" class="col-xs-5 ">
+                    <i class="uparrow"></i>
+                    返回顶部</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="download">手机APP下载</a>
+            <span>慢慢买手机版-掌上比价平台</span>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 定义商城模板引擎 -->
+    <script id="citynavTmp" type="text/html">
+        {{each result as value i}}
+            <a href="{{value.navHref}}">
+                <img src="{{#value.navImg}}" alt="">
+                {{value.navTitle}}
+            </a>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/citynav.js"></script>
+
+</body>
+
+</html>

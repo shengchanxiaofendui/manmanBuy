@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <title>title</title>
+     <!-- 引入bootrap的css文件 -->
+     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+     <!-- 引入主页的less文件 -->
+     <link rel="stylesheet/less" href="../less/base.less">
+     <link rel="stylesheet/less" href="../less/prolist.less">
+     <!-- 引入less.js编译器 -->
+     <script src="../lib/less/less.js"></script>
+</head>
+<body>
+
+        <header id="header">
+                <img class="logo" src="../images/header_logo.png" alt="">
+                <img class="download" src="../images/header_app.png" alt="">
+        </header>
+        <section id="search">
+                <input type="search" placeholder="请输入你想比价的商品">
+                <button class="btn btn-danger">搜索</button>
+        </section>
+        <main id="main">
+            <div class="title">
+                 <div class="row">
+                     <a href="" class="col-xs-3">综合</a>
+                     <a href="" class="col-xs-3">销量</a>
+                     <a href="" class="col-xs-3">价格</a>
+                     <a href="" class="col-xs-3">
+                        <i class="glyphicon glyphicon-filter"></i>    
+                        筛选
+                    </a>
+                 </div>
+            </div>
+            <div class="productlist media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" src="../images/gengduo.png" alt="...">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">Media heading</h4>
+                      Lorem ipsum dolor sit amet excepturi numquam accusantium quaerat corrupti, provident sint rerum mollitia dolore!
+                    </div>
+            </div>
+        </main>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../js/prolist.js"></script>
+    <script>
+    </script>
+</body>
+</html>

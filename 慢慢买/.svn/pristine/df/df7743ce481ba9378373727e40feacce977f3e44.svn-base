@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <title>title</title>
+    <title>title</title>
+    <!-- 引入bootrap的css文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入主页的less文件 -->
+    <link rel="stylesheet/less" href="../less/base.less">
+    <link rel="stylesheet" href="../less/listclass.less">
+    <!-- 引入less.js编译器 -->
+    <script src="../lib/less/less.js"></script>
+</head>
+<body>
+        <header id="header">
+            <img class="logo" src="../images/header_logo.png" alt="">
+            <img class="download" src="../images/header_app.png" alt="">
+        </header>
+        <section id="search">
+                <input type="search" placeholder="请输入你想比价的商品">
+                <button class="btn btn-danger">搜索</button>
+            </section>
+        <main id="main">
+
+            <div class="productlist">
+                 <div class="product-item">
+                     <a class="pull-left" href="#">大家电</a>
+                     <i class="pull-right"></i>
+                </div>
+            </div>
+
+            
+                
+        </main>
+        <footer id="footer">
+                <div class="footer-top">
+                        <div class="row">
+                            <div class="col-xs-7">
+                                    <a class="col-xs-6" href="#">登录</a>
+                                    <a class="col-xs-6" href="#">注册</a>
+                            </div>
+                        
+                            <a href="#" class="col-xs-5">
+                            <i class="uparrow"></i> 
+                            返回顶部</a>
+                        </div>
+                </div>
+                <div class="footer-bottom">
+                    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="download">手机APP下载</a>
+                    <span>慢慢买手机版-掌上比价平台</span>
+                    <p>m.manmanbuy.com</p>
+                </div>
+        </footer>
+            <script src="../lib/jquery/jquery.min.js"></script>
+            <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+
+</body>
+</html>

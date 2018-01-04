@@ -1,0 +1,163 @@
+@import "base.less";
+
+#header{
+  position: relative;
+}
+
+#search{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#footer{
+  margin: 10px 0;
+}
+
+#main{
+  background-color: #efefef;
+  padding: 0;
+  >.nav{
+    background: linear-gradient(to top,#dedede, #fff);
+    border-top: 2px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    padding: 0 10px;
+    >a{}
+  }
+  p.title{
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    height: 36px;
+    margin: 0px;
+    line-height: 36px;
+    color:#874604;
+    font-weight: bold;
+    padding-left: 10px;
+  }
+  >.top10brand{
+
+    >ul{
+      >li{
+        border-bottom: 1px solid #ccc;
+
+        a{
+          display: block;
+          position: relative;
+          padding: 10px;
+          padding-left: 40px;
+          height: 60px;
+          text-decoration: none;
+          >b{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            color: #fff;
+            background-color: #ccc;
+            top: 10px;
+            left: 10px;
+            text-align: center;
+            font-weight: 400;
+
+          }
+          >span{
+            font-size: 16px;
+            color: #000;
+          }
+          >p{
+            color: #aaa;
+          }
+          >i{
+            position: absolute;
+            right: 10px;
+            top: 18px;
+            font-size: 24px;
+            color: #bbb;
+          }
+        }
+        &:nth-child(1) a b{
+          background-color: red;
+        }
+        &:nth-child(2) a b{
+          background-color: orange;
+        }
+        &:nth-child(3) a b{
+          background-color: lightgreen;
+        }
+      }
+    }
+  }
+  >.top10product{
+    >ul{
+      >li{
+        >a{
+          display: block;
+          position: relative;
+          height: 125px;
+          text-decoration: none;
+          >img{
+            width: 100px;
+            padding: 5px;
+            position: absolute;
+          }
+          div{
+            position: absolute;
+            width: 100%;
+            padding: 10px;
+            padding-left: 100px;
+            >.proName{
+              font-size: 14px;
+              color: #333;
+              margin: 0;
+            }
+            >.proPrice{
+              font-size: 20px;
+              color: red;
+              margin: 10px 0;
+              >span{
+                font-size: 26px;
+                color: goldenrod;
+                float: right;
+                height: 26px;
+                line-height: 26px;
+              }
+            }
+            >.proCommentCount{
+              font-size: 12px;
+              color: #999;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  >.comment{
+    >ul{
+      >li{
+        >a{
+          text-decoration: none;
+          color:#666;
+          >.comment{
+            position: relative;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            margin: 10px;
+            >p{
+              padding: 0 10px;
+              >.star{
+                color: goldenrod;
+                font-size: 20px;
+              }
+              >.date{
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

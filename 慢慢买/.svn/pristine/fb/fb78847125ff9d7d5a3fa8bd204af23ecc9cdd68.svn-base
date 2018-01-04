@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>优惠券详情页</title>
+    <!-- 1.引入bootstrap的css文件 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 3.引入less文件 -->
+    <link rel="stylesheet/less" href="./less/coupondetail.less">
+    <!-- 4.引入less.js编译器 -->
+    <script src="./lib/less/less.js"></script>
+
+</head>
+
+<body>
+    <div id="mask" class="bespread">
+        <div class="box">
+            <img src="./images/ic_kb.png" alt="">
+        </div>
+    </div>
+    <div id="coupon_header" class="head">
+        <div class="back">
+            <a href="http://m.manmanbuy.com/" class="icon-back glyphicon glyphicon-menu-left"></a>
+        </div>
+        <i>肯德基优惠券</i>
+        <div class="download">
+            <a href="#">
+                <img src="./images/header_app.png" alt="">
+            </a>
+        </div>
+    </div>
+
+    <main id="main">
+        <div class="remind">
+            --点餐前出示手机中的优惠券, 即可享受优惠--
+        </div>
+        <ul></ul>
+        <div id="coupon_menu" class="nav">
+            <a href="#">首页</a>
+            <i class="right glyphicon glyphicon-menu-right"></i>
+            <a href="#">优惠券</a>
+            <i class="right glyphicon glyphicon-menu-right"></i>
+            <a href="#">肯德基优惠券</a>
+        </div>
+    </main>
+    <script id="coupondetailTmp" type="text/html">
+        {{each result as value i}}
+        <li data-img="{{value.couponProductImg}}">
+            <a href="#">
+                {{#value.couponProductImg}}
+                <div class="text">
+                    <h2>{{value.couponProductName}}</h2>
+                    <h3>{{value.couponProductPrice}}</h3>
+                    <br>
+                    <span>{{value.couponProductTime}}</span>
+                    <div class="rightarow glyphicon glyphicon-menu-right"></div>
+                </div>
+
+            </a>
+        </li>
+        {{/each}}
+    </script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/coupondetail.js"></script>
+</body>
+
+</html>  

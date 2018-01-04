@@ -1,0 +1,31 @@
+$(function(){
+    var categoryid = getQueryString('categoryid');
+    console.log(categoryid);
+    $.ajax({
+        url: 'http://127.0.0.1:9090/api/getproductlist',
+        data: {
+            categoryid: categoryid,
+            pageid: 1
+        },
+        success: function(data){
+            console.log(data);
+        }
+    })
+
+    function getQueryString(key) {
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        var result = window.location.search.substr(1).match(reg);
+        return result ? decodeURIComponent(result[2]) : null;
+    }
+    // var categoryid = getQueryString('categoryid')
+    // console.log(categoryid);
+    // $.ajax({
+    //     url: 'http://127.0.0.1:9090/api/getcategorytitle',
+    //     data: {
+    //         'categoryid': categoryid
+    //     },
+    //     success: function(data) {
+    //         console.log(data);
+    //     }
+    // })
+})

@@ -1,0 +1,158 @@
+@import "base.less";
+#header{
+    background-color: @main-color;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    .icon-back{
+        float: left;
+        font-size: 20px;
+        color: #fff;
+    }
+    >h3{
+        font-size: 20px;
+        font-weight: bold;
+        margin: 0;
+        color: #fff;
+    }
+    .download {
+        width: 34px;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+    }
+}
+#main{
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+    .container{
+      >h3{
+        font-size: 18px;
+      }  
+      h4{
+        color: #ff6c00;
+        font-size: 16px;
+      }
+      .info{
+        padding: 5px;
+        color: #999999;
+      }
+      .content{
+          overflow: hidden;
+         .productimg{
+             width: 120px;
+             margin: 5px;
+             float: right;
+             >img{
+                 width: 100%;
+             }
+         }   
+         .productinfo{
+             >P{
+                 font-size: 16px;
+                 line-height: 24px;
+                 color: #606060;
+             }
+         }
+      }
+      .btn-buyit{
+        width: 100%;
+        padding: 20px 20px;
+        a{
+            background-color: #FF9000;
+            display: block;
+        }
+      }
+      .discuss{
+            .reply{
+                width: 100%;
+                .form{
+                    border-top: 1px solid #ECEAE8;
+                    border-right: 1px solid #ECEAE8;
+                    border-left: 1px solid #ECEAE8;
+                    >textarea{
+                        border: none;
+                        width: 100%;
+                    }
+                    .ctrl{
+                        transform: translateY(-6px);
+                        position: relative;
+                        overflow: hidden;
+                        border: 1px solid #ECEAE8;
+                        >input{
+                            float: right;
+                            height: 40px;
+                            width: 100px;
+                            background-color: #FF9000;
+                            color: #ebebeb;
+                        }
+                    }
+                }
+            }
+            .tit{
+                padding: 5preplyx;
+                height: 34px;
+                line-height: 24px;
+                margin-bottom: 0;
+                #newcomment{
+                    text-align: right;
+                }
+            }
+            .comments{
+                margin-top: 5px;
+            }
+      }
+      .Lable{
+        width: 100%;
+        height: 36px;
+        padding: 6px;
+        line-height: 24px;
+      }
+    }
+}
+#nav{
+    width: 100%;
+    height: 32px;
+    line-height: 32px;
+    font-size: 16px;
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    padding-left: 5px;  
+}
+#appbanner{
+    background-color: #ebebeb;
+    padding:10px 0; 
+    display: block;
+    position: relative;
+    background-color: #434343;
+    .logo{
+        width: 64px;
+        height: 64px;
+        float: left;
+        margin: 5px;
+        img{
+            width: 100%;
+        }
+    }
+    .apptitle{
+        color: #fff;
+        >p{
+            color: #fee6c2
+        }
+    }
+    .appdownload{
+        position: absolute;
+        right: 5px;
+        top: 10px;
+        >a{
+            background: #6db110;
+            border-color: #6db110;
+        }
+    }
+}
+
+#footer{
+    margin: 0;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <title>title</title>
+    <style>
+        /* 3. 写样式
+   			1. 给父容器固定宽度（100%）
+   			2. 给子容器的宽度自动（跟内容一样宽）根据内容撑开
+   			3. 给父容器加overflow:hidden  (不能有滚动条) */
+    
+    #wrapper {
+        height: 300px;
+        overflow: hidden;
+        border: 1px solid #000;
+    }
+    </style>
+</head>
+<body>
+
+    <!-- 2. 写页面的结构 -->
+    <!-- 父容器固定宽度或者高度 -->
+    <div id="wrapper">
+            <!-- 子容器 宽度或者高度会比父容器大 -->
+            <ul>
+                <li>这是第1个li</li>
+                <li>这是第2个li</li>
+                <li>这是第3个li</li>
+                <li>这是第4个li</li>
+                <li>这是第5个li</li>
+                <li>这是第6个li</li>
+                <li>这是第7个li</li>
+                <li>这是第8个li</li>
+                <li>这是第9个li</li>
+                <li>这是第10个li</li>
+                <li>这是第11个li</li>
+                <li>这是第12个li</li>
+                <li>这是第13个li</li>
+                <li>这是第14个li</li>
+                <li>这是第15个li</li>
+                <li>这是第16个li</li>
+                <li>这是第17个li</li>
+                <li>这是第18个li</li>
+                <li>这是第19个li</li>
+                <li>这是第20个li</li>
+                <li>这是第21个li</li>
+                <li>这是第22个li</li>
+                <li>这是第23个li</li>
+                <li>这是第24个li</li>
+                <li>这是第25个li</li>
+                <li>这是第26个li</li>
+                <li>这是第27个li</li>
+                <li>这是第28个li</li>
+                <li>这是第29个li</li>
+                <li>这是第30个li</li>
+            </ul>
+        </div>
+
+</body>
+</html>
+<script src="../lib/iscroll/iscroll.js"></script>
+
+<script>
+ 
+
+ function pulldownRefresh() {
+        // console.log('正在下拉刷新');
+        //延迟1秒关闭下拉刷新效果
+        setTimeout(function() {
+            // console.log('数据请求完毕');
+            // 关闭下拉刷新效果
+            // mui(...).pullRefresh(...).endPulldown is not a function mui官方文档里面的结束下拉刷新是之前版本的使用方式 和我们当前mui使用不一样
+            // mui('#pullrefresh').pullRefresh().endPulldown();
+            // mui demo文档的结束下拉刷新的方法
+            mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
+        }, 1000)
+    }
+    var count = 0;
+    /**
+     * 上拉加载具体业务实现
+     */
+    function pullupRefresh() {
+        setTimeout(function() {
+            // console.log('数据请求完毕');
+            // 关闭下拉刷新效果
+            // mui(...).pullRefresh(...).endPulldown is not a function mui官方文档里面的结束下拉刷新是之前版本的使用方式 和我们当前mui使用不一样
+            // mui('#pullrefresh').pullRefresh().endPulldown();
+            // mui demo文档的结束下拉刷新的方法
+            mui('#pullrefresh').pullRefresh().endPullupToRefresh(); 
+        }, 1000)
+    }
+</script>

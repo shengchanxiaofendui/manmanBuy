@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet/less" href="../less/distop.less"/>
+    <script src="../lib/less/less.js"></script>
+</head>
+<body>
+<!--头部-->
+<header id="header">
+    <img class="logo" src="../images/header_logo.png" alt="">
+    <img class="download" src="../images/header_app.png" alt="">
+</header>
+<!--搜索框-->
+<section id="search">
+    <input type="search" placeholder="请输入你想比价的商品">
+    <button class="btn btn-danger">搜索</button>
+</section>
+
+<main id="main">
+    <div class="nav">
+        <a href="../manmanbuy.html">首页</a>
+        >
+        <a href="top10.html">品牌大全</a>
+        >
+        <span>品牌大全</span>
+    </div>
+    <div class="top10brand">
+        <p class="title"></p>
+        <ul>
+        </ul>
+    </div>
+    <div class="top10product">
+        <p class="title"></p>
+        <ul>
+        </ul>
+    </div>
+    <div class="comment">
+        <p class="title"></p>
+        <ul>
+        </ul>
+    </div>
+</main>
+
+<footer id="footer">
+
+    <div class="footer-top ">
+        <div class="row ">
+            <div class="col-xs-7 ">
+                <a class="col-xs-6" href="#">登录</a>
+                <a class="col-xs-6 " href="#">注册</a>
+            </div>
+
+            <a href="#" class="col-xs-5 ">
+                <i class="uparrow"></i>
+                返回顶部</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="download">手机APP下载</a>
+        <span>慢慢买手机版-掌上比价平台</span>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+
+
+<script id="brandTmp" type="text/html">
+    {{each result as value i}}
+    <li>
+        <a href="#">
+            <b>{{i+1}}</b><span>{{value.brandName}}</span>
+
+            <p>{{value.brandInfo}}</p>
+            <i class="glyphicon glyphicon-menu-right"></i>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script id="productTmp" type="text/html">
+    {{each result}}
+    <li>
+        <a href="bijia.html?productId={{$value.productId}}">
+            {{#$value.productImg}}
+            <div>
+                <p class="proName">{{$value.productName}}</p>
+
+                <p class="proPrice">
+                    {{$value.productPrice}}
+                    <span class="star">★★★★★</span>
+                </p>
+
+                <p class="proCommentCount">
+                    <i>{{$value.productQuote}}</i>
+                    <i>{{$value.productCom}}</i>
+                </p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script id="commentTmp" type="text/html">
+    {{each result}}
+    <li>
+        <a href="#">
+            <div class="comment">
+                <p class="commentInfo">
+                    <span class="userName">{{$value.comName}}</span>
+                    <span class="star">★★★★★</span>
+                    <span class="date">{{$value.comTime}}</span>
+                </p>
+
+                <p class="commentContent">{{$value.comContent}}</p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<script src="../js/distop.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+$(function(){
+    var categoryid = getQueryString('categoryid');
+    var totalPage = 0;
+    var pageid = 1;
+    getData(pageid);
+    //tap栏切换
+    
+    $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show');
+        $('#main .row a').parent().addClass('active').siblings().removeClass('active');
+      })
+
+    //点击按钮关闭底部下载框
+    $('.closefix').click(function(){
+        $('#app-promotion-bar').css('display','none');
+    })
+
+   
+    function getData (pageid) {
+        $.ajax({
+            url: 'http://127.0.0.1:9090/api/getproductlist',
+            data: {
+                categoryid: categoryid,
+                pageid: pageid
+            },
+            success: function(data){
+                console.log(data);
+                var html = template('categorydetailList',data);
+                $('#main .productlist').html(html);
+                totalPage = Math.ceil(data.totalCount / data.pagesize);
+                // console.log($('.selection option').length)
+                if(!$('.selection option').length) {
+                    console.log($('.selection option').length);
+                    for(var i=1; i<=totalPage; i++) {
+                        var option = '<option value="'+i+'">'+i+' / '+totalPage+'</option>';
+                        $('.selectionlist').append(option); 
+                     }   
+                }          
+
+                $('.selectionlist option').eq(pageid-1).prop('selected',true);
+            }
+        })
+    
+    }
+
+    //分页page--
+    $('.previous').click(function(){
+        pageid--;
+        if(pageid < 1){
+            pageid = 1;
+        }
+        getData(pageid);
+    })
+
+    //分页page++
+    $('.next').click(function(){
+        pageid++;
+        if(pageid > 3){
+            pageid = 3;
+        }
+        console.log(pageid);
+        getData(pageid);
+    })
+
+    function getQueryString(key) {
+        var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)");
+        var result = window.location.search.substr(1).match(reg);
+        return result ? decodeURIComponent(result[2]) : null;
+    }
+   
+})

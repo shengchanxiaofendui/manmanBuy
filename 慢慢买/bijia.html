@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <title>manmanBuy-bijia</title>
+     <!-- 引入bootrap的css文件 -->
+     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+     <!-- 引入主页的less文件 -->
+     <link rel="stylesheet/less" href="./less/base.less">
+     <link rel="stylesheet/less" href="./less/bijia.less">
+     <!-- 引入less.js编译器 -->
+     <script src="./lib/less/less.js"></script>
+</head>
+<body>
+
+        <header id="header">
+                <a href="./manmanbuy.html"></a>
+                <img class="logo" src="./images/header_logo.png" alt="">
+                <img class="download" src="./images/header_app.png" alt="">
+        </header>
+        <section id="search">
+                <input type="search" placeholder="请输入你想比价的商品">
+                <button class="btn btn-danger">搜索</button>
+        </section>
+        <div id="wrapper">
+            <div>
+                <main id="main">
+                        <div class="product-detail">
+                            <h4 class="title">
+                                <a href="#">首页 ></a>
+                                <a href="#">手机 ></a>
+                                <span>苹果7</span>
+                            </h4>
+                            <div class="content clearfix">
+                                <img src="./images/gengduo.png" alt="">
+                                <p>苹果Apple iPhone7 Plus (A1661) 128G 红色 全网通4G手机</p>
+                                <span class="pull-left">
+                                    当前最低: 
+                                    <i class="price"></i>
+                                </span>
+                                <span class="pull-right">
+                                    优选评论:
+                                    <i class="commen"></i>
+                                </span>
+            
+                            </div>
+                        </div>
+                
+                        <div class="bijia">
+                            <div class="title row">
+                                <div class="col-xs-4">比价购买</div>
+                                <div class="col-xs-4">产品参数</div>
+                                <div class="col-xs-4">优选评价</div>
+                            </div>
+                            <div class="commen-tabs row">
+                                    <div class="col-xs-4"><span class="active"> 全部 </span></div>
+                                    <div class="col-xs-4"><span>值得购买</span></div>
+                                    <div class="col-xs-4"><span>不值得购买</span>
+                                    </div>
+                                    <img src="http://www.zuyushop.com/wap/images/tab_ar.png" alt="">
+                            </div>
+                            <div class="commensList">
+                                
+                            </div>
+                            <div class="banner clearfix">
+                                <a href="http://m.manmanbuy.com/appDownLoad.html?type=mcomment_banner_word&amp;value=wapbanner&#10;" style="font-size:16px;color:#000;">双11剁手必备，一款查淘宝商品历史价格的APP，轻松识别真假促销！</a>
+                                <a href="http://m.manmanbuy.com/appDownLoad.html?type=mcomment_banner_word&amp;value=wapbanner&#10;" style="font-size:16px;color:#000;">
+                                    <img src="https://p0.pstatp.com/origin/3e8a00038d1249bfcf45" alt="">
+                                </a>
+                                <div class="download">
+                                    <a href="http://m.manmanbuy.com/appDownLoad.html?type=mcomment_banner_word&amp;value=wapbanner&#10;" class="pull-left">
+                                        慢慢买
+                                    </a>
+                                    <button>
+                                        立即下载
+                                    </button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="getmore">
+                            <a class="morein" href="comment.aspx?id=537078">查看更多评价</a>
+                        </div>
+                            
+                </main>
+    
+                <!-- footer -->
+                <footer id="footer">
+                        <div class="footer-top">
+                                <div class="row clearfix">
+                                    <div class="col-xs-7">
+                                            <a class="col-xs-6" href="#">登录</a>
+                                            <a class="col-xs-6" href="#">注册</a>
+                                    </div>
+                                
+                                    <a href="#" class="col-xs-5">
+                                    <i class="uparrow"></i> 
+                                    返回顶部</a>
+                                </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="download">手机APP下载</a>
+                            <span>慢慢买手机版-掌上比价平台</span>
+                            <p>m.manmanbuy.com</p>
+                        </div>
+                </footer>
+            </div>
+        </div>
+        
+        <!-- 底部下载框 -->
+        <div id="app-promotion-bar"> 
+            <a class="closefix" href="javascript:;"></a>
+            <div class="icon"></div>
+            <p class="titlefix">慢慢买</p>
+            <p class="describe ">你的随身购物助手！</p>
+            <a class="download-btn" href="http://m.manmanbuy.com/app.html?type=foot_Prolistaspx_id_4&amp;value=wapfoot" onclick="trackEvent('底部悬浮下载');">立即打开</a> 
+        </div>
+    <script type="text/html" id="productcontentTmp">
+       {{each result}}
+            <h4 class="title">
+                <a href="#">首页 ></a>
+                <a href="prolist.html?categoryid={{$value.categoryId}}">手机 ></a>
+                <span>{{$value.productName}}</span>
+            </h4>
+            <div class="content clearfix">
+                {{#$value.productImg}}
+                <p>{{$value.productName}}</p>
+                <span class="pull-left">
+                    当前最低: ¥5938.00 
+                    <i class="price"></i>
+                </span>
+                <span class="pull-right">
+                    优选评论: 5244条
+                    <i class="commen"></i>
+                </span>
+
+            </div>
+       {{/each}}
+    </script>
+    <script type="text/html" id="commencontentTmp">
+         {{each result}}
+           <div class="commenItem">
+                <p class="first clearfix">
+                        <span class="commen-name pull-left">{{$value.comName
+                            }}</span>
+                        <span class="commen-date pull-right">{{$value.comTime}}</span>
+                </p>
+                <p class="second clearfix">
+                        <i class="commen-stars pull-left clearfix">
+                            <embed src="./images/star.svg" width="18" height="18" type="image/svg+xml">
+                            <embed src="./images/star.svg" width="18" height="18" type="image/svg+xml">
+                            <embed src="./images/star.svg" width="18" height="18" type="image/svg+xml">
+                            <embed src="./images/star.svg" width="18" height="18" type="image/svg+xml">
+                            <embed src="./images/star.svg" width="18" height="18" type="image/svg+xml">
+                        </i>
+                        <span class="commen-mall pull-right">{{$value.comFrom}}</span>
+                </p>
+                <p class="commen-content">{{$value.comContent}}</p>
+                <p class="reply">回复</p>    
+           </div>
+            
+         {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/bijia.js"></script>
+    <!-- 1. 先引入iscroll js文件 -->
+    <script src="./lib/iscroll/iscroll.js"></script>
+ 
+</body>
+</html>

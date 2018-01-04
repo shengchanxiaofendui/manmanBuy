@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入bootrap的css文件 -->
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default">
+                  <div class="panel-heading" role="tab" id="headingOne">
+                    <h4 class="panel-title">
+                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="productlist">
+                                    <div class="product-item clearfix">
+                                        <i class="pull-left" href="#">大 家 电</i>
+                                        <i class="pull-right glyphicon glyphicon-menu-down"></i>
+                                   </div>
+                               </div>
+                      </a>
+                    </h4>
+                </div>
+                <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                    <div class="panel-body">
+                      <div class="row">
+                          <div class="col-xs-4">平板电视</div>
+                          <div class="col-xs-4">平板电视</div>
+                          <div class="col-xs-4">平板电视</div>
+                          <div class="col-xs-4">平板电视</div>
+                          <div class="col-xs-4">平板电视</div>
+                          <div class="col-xs-4">平板电视</div>
+                          <div class="col-xs-4">平板电视</div>
+                          <div class="col-xs-4">平板电视</div>
+                          <div class="col-xs-4">平板电视</div>
+                      </div>
+                    </div>
+                </div>
+        </div>
+               
+<script src="../lib/jquery/jquery.min.js"></script>              
+<script src="../lib/bootstrap/js/bootstrap.min.js"></script>  
+<script>
+    $('.collapse').collapse();
+</script>
+</body>
+</html>

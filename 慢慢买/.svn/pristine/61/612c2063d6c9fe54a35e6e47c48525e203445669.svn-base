@@ -1,0 +1,53 @@
+html {
+  font-size: 16px;
+}
+#main {
+  padding-top: 85px;
+}
+#main .productlist {
+  padding: 20px 5px;
+}
+#main .productlist .panel-group {
+  background-color: #ebebeb;
+  border-radius: 10px;
+  margin: 0;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 5px #ccc;
+}
+#main .productlist .panel {
+  border: none;
+}
+#main .productlist .panel-heading {
+  padding: 0;
+}
+#main .productlist .product-item {
+  height: 42px;
+  line-height: 42px;
+  padding: 0 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #ccc;
+}
+#main .productlist .product-item > span {
+  color: black;
+  font-weight: bold;
+}
+#main .productlist .product-item i {
+  line-height: 40px;
+}
+#main .productlist .panel-collapse .panel-body {
+  padding: 0;
+}
+#main .productlist .panel-collapse .panel-body .row {
+  margin: 0;
+}
+#main .productlist .panel-collapse .panel-body .row a {
+  text-align: center;
+  padding: 0;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+#main .productlist .panel-collapse .panel-body .row a:nth-child(3n) {
+  border-right: none;
+}

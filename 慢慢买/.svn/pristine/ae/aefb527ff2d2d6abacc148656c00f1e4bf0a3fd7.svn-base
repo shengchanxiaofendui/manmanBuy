@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <title>慢慢买主页</title>
+    <!-- 引入bootrap的css文件 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入字体图标的文件 -->
+    <link rel="stylesheet" href="css/font.css">
+    <!-- 引入主页的less文件 -->
+    <link rel="stylesheet/less" href="./less/index.less">
+    <!-- 引入less.js编译器 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <img class="logo" src="images/header_logo.png" alt="">
+        <img class="download" src="images/header_app.png" alt="">
+    </header>
+    <section id="search">
+        <input type="search" placeholder="请输入你想比价的商品">
+        <button class="btn btn-danger">搜索</button>
+    </section>
+    <nav id="nav">
+        <div class="row hid">
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#" class="toggle">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+            <div class="col-xs-3">
+                <a href="#">
+                    <img src="./images/ic_search.png" alt="">
+                    <p>比价搜索</p>
+                </a>
+            </div>
+        </div>
+    </nav>
+    <section id="discount">
+        <h4>超值折扣推荐</h4>
+        <i class="glyphicon glyphicon-chevron-right"></i>
+        <div class="discount-content">
+            <div class="media">
+                <a href="#">
+                    <div class="media-left">
+
+                        <img class="media-object" src="http://img2017.manmanbuy.com/2018010015244142417.png" alt="...">
+
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">【囤年货】赶年味儿~坚果一篇全都搞定 </h4>
+                        <span>错过就要去超市排队抢购啦！</span>
+                        <div>
+                            <div class="pull-left">
+                                慢慢买 | 01-02 15:35
+                            </div>
+                            <div class="pull-right">
+                                <i class="glyphicon glyphicon-comment"></i> 1
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="gengduo">
+        <a href="#">更多优惠信息<i class="glyphicon glyphicon-menu-right"></i></a>
+    </div>
+   <div class="paihang">
+        <h4>品牌排行</h4>
+        <i class="glyphicon glyphicon-chevron-right"></i>
+   </div>
+    <footer id="footer">
+        
+        <div class="footer-top ">
+            <div class="row ">
+                <div class="col-xs-7 ">
+                    <a class="col-xs-6" href="#">登录</a>
+                    <a class="col-xs-6 " href="#">注册</a>
+                </div>
+
+                <a href="#" class="col-xs-5 ">
+                    <i class="uparrow"></i>
+                    返回顶部</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="download">手机APP下载</a>
+            <span>慢慢买手机版-掌上比价平台</span>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 1.定义导航菜单的模板 -->
+    <script id="indexMenuTmp" type="text/html">
+        {{each result as value i}}
+        <div class="col-xs-3 navlist">
+            <a href="{{value.titlehref}}">
+                {{#value.img}}
+                <p>{{value.name}}</p>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+    <!-- 定义折扣商品模板 -->
+    <script id="discountTmp" type="text/html">
+        {{each result as value i}}
+        <div class="media">
+            <a href="./pages/bijia.html?productId={{value.productId}}">
+                <div class="media-left">
+                    {{#value.productImgSm}}
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading">{{value.productName}}</h4>
+                    <span>错过就要去超市排队抢购啦！</span>
+                    <div>
+                        <div class="pull-left">
+                            {{value.productFrom}} | {{value.productTime}}
+                        </div>
+                        <div class="pull-right">
+                            <i class="glyphicon glyphicon-comment"></i> {{value.productComCount.replace('有','').replace('人评论','')}}
+                        </div>
+                    </div>
+
+                </div>
+            </a>
+        </div>
+        {{/each}}
+    </script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>

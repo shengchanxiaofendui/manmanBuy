@@ -1,0 +1,14 @@
+#search {
+    border-bottom: 1px solid #ccc;
+}
+#main {
+    >.title {
+        padding: 5px 0;
+        .row {
+            text-align: center;
+            >a {
+
+            }
+        }
+    }
+}

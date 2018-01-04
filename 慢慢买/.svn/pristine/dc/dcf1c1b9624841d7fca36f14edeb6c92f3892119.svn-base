@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>海外折扣</title>
+    <!-- 引入bootrap的css文件 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入主页的less文件 -->
+    <link rel="stylesheet/less" href="./less/Overseas.less">
+    <!-- 引入less.js编译器 -->
+    <script src="./lib/less/less.js"></script>
+    <!-- <link rel="stylesheet/less" href="./pages/listclass.html"> -->
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header" class="row">
+        <a href="manmanbuy.html" class="col-xs-2">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+        </a>
+        <h1 class="col-xs-8">
+            省钱控 - 最新优惠
+        </h1>
+        <div class="col-xs-2">
+
+            <img src="./images/header_app.png" alt="">
+        </div>
+    </header>
+    <!-- 内容 -->
+    <section id="cxdiv">
+        <ul>
+            <li class="clearfix">
+                <a href="#">
+                    <div class="pic">
+                        <img src="http://img2017.manmanbuy.com/2018010015483346303.png">
+                    </div>
+                    <div class="info">
+                        <div class="title">
+                            年货：小角楼 52度小角楼金鑫6年浓香型白酒500ml
+                            <span>
+                                39元包邮（券后）
+                            </span>
+                        </div>
+                        <div class="other ">
+                            <span class="mall">
+                                天猫旗舰店 | 01-03 15:48
+                            </span>
+                            <span class="comment">
+                                <i class="glyphicon glyphicon-minus"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!-- 分页 -->
+    <section id="section">
+        <div class="top-page">
+            <a href="#">上一页</a>
+        </div>
+        <div class="select">
+            <select>
+
+            </select>
+        </div>
+        <div class="bottom-page ">
+            <a href="#">下一页</a>
+        </div>
+    </section>
+    <section id="nav">
+        <a href="index.html">首页></a>
+        <span>省钱控</span>
+    </section>
+    <!-- 底部 -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div>
+                <div>
+                    <a class="col-xs-6" href="#">登录</a>
+                    <a class="col-xs-6" href="#">注册</a>
+                </div>
+
+                <a href="#">
+                    <i class="uparrow"></i>
+                    返回顶部</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="download">手机APP下载</a>
+            <span>慢慢买手机版-掌上比价平台</span>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+
+    <!-- 模板页渲染 -->
+    <script id="content" type="text/html">
+        {{each result}}
+        <li>
+            <a href="./pages/bijia.html?productId={{$value.productId}}">
+                <div class="pic">
+                    {{#$value.productImgSm}}
+                </div>
+                <div class="info">
+                    <div class="title">
+                        {{$value.productName}}
+                        <span>
+                            {{$value.productPinkage}}
+                        </span>
+                    </div>
+                    <div class="other ">
+                        <span class="mall">
+                            {{$value.productFrom}} | 01-03 15:48
+                        </span>
+                        <span class="comment">
+                            <i>{{$value.productComCount}}</i>
+                        </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </script>
+
+    <!-- 引入jQuery -->
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <!-- 引入JS -->
+    <script src="./js/Overseas.js"></script>
+    <!-- 引入模板块 -->
+    <script src="./lib/artTemplate/template.js"></script>
+</body>
+
+</html>

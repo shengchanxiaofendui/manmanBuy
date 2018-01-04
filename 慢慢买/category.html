@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <title>manmanBuy-listclass</title>
+    <!-- 引入bootrap的css文件 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <!-- 引入主页的less文件 -->
+    <link rel="stylesheet/less" href="./less/base.less">
+    <link rel="stylesheet/less" href="./less/listclass.less">
+    <!-- 引入less.js编译器 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+<body>
+        <header id="header">
+            <img class="logo" src="./images/header_logo.png" alt="">
+            <img class="download" src="./images/header_app.png" alt="">
+        </header>
+        <section id="search">
+                <input type="search" placeholder="请输入你想比价的商品">
+                <button class="btn btn-danger">搜索</button>
+        </section>
+        <main id="main" class="clearfix">
+
+            <div class="productlist">
+                 <div class="product-item clearfix">
+                     <a class="pull-left" href="#">大 家 电</a>
+                     <i class="pull-right glyphicon glyphicon-menu-down"></i>
+                </div>
+            </div>
+
+            
+                
+        </main>
+        <!-- footer -->
+        <footer id="footer">
+                <div class="footer-top">
+                        <div class="row clearfix">
+                            <div class="col-xs-7">
+                                    <a class="col-xs-6" href="#">登录</a>
+                                    <a class="col-xs-6" href="#">注册</a>
+                            </div>
+                        
+                            <a href="#" class="col-xs-5">
+                            <i class="uparrow"></i> 
+                            返回顶部</a>
+                        </div>
+                </div>
+                <div class="footer-bottom">
+                    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="download">手机APP下载</a>
+                    <span>慢慢买手机版-掌上比价平台</span>
+                    <p>m.manmanbuy.com</p>
+                </div>
+        </footer>
+        <!-- 底部下载框 -->
+        <div id="app-promotion-bar"> 
+            <a class="closefix" href="javascript:;"></a>
+            <div class="icon"></div>
+            <p class="titlefix">慢慢买</p>
+            <p class="describe ">你的随身购物助手！</p>
+            <a class="download-btn" href="http://m.manmanbuy.com/app.html?type=foot_Prolistaspx_id_4&amp;value=wapfoot" onclick="trackEvent('底部悬浮下载');">立即打开</a> 
+    </div>
+        <script src="./lib/jquery/jquery.min.js"></script>
+        <script src="./lib/artTemplate/template.js"></script>
+        <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./js/listclass.js"></script>
+        <script type="text/html" id="getcategorytitleTmp">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            {{each result}}
+            <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading{{$value.titleId}}">
+                      <h4 class="panel-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$value.titleId}}" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="product-item clearfix" data-value="{{$value.titleId}}">
+                                        <span class="pull-left" href="#">{{$value.title}}</span>
+                                        <i class="pull-right glyphicon glyphicon-menu-down"></i>
+                                </div>
+                        </a>
+                      </h4>
+                  </div>
+                  <div id="collapse{{$value.titleId}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                          <div class="row">
+                              <div class="col-xs-4">平板电视</div>
+                              <div class="col-xs-4">平板电视</div>
+                              <div class="col-xs-4">平板电视</div>
+                              <div class="col-xs-4">平板电视</div>
+                              <div class="col-xs-4">平板电视</div>
+                              <div class="col-xs-4">平板电视</div>
+                              <div class="col-xs-4">平板电视</div>
+                              <div class="col-xs-4">平板电视</div>
+                              <div class="col-xs-4">平板电视</div>
+                          </div>
+                        </div>
+                    </div>
+                    
+            {{/each}}
+            </div>
+        </script>
+        <script type="text/html" id="getcategoryListTmp">
+             {{each result}}
+                <a href="prolist.html?categoryid={{$value.categoryId}}" class="col-xs-4" data-categoryId="{{$value.categoryId}}">{{$value.category}}</a>
+             {{/each}}  
+        </script>
+
+</body>
+</html>

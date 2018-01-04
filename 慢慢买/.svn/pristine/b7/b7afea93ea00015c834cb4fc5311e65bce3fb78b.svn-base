@@ -1,0 +1,274 @@
+/* 开发的时候写* 上线的时候可以网上找初始化代码吧所有标签拷过来 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 在移动端不允许出现横向滚动条的不能让padding或者border撑大盒子 */
+  box-sizing: border-box;
+  /*  清除移动端点击（按住）高亮颜色 */
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+li {
+  list-style: none;
+}
+i,
+em {
+  font-style: normal;
+}
+input {
+  /* 内边框  点击输出框出来的边框*/
+  outline: 0;
+  /* 外边框 */
+  border: 0;
+}
+img {
+  /* 设置图片对齐方式和文字一样解决图片3px的间隙的问题 */
+  vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+/* 公共样式 */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.w50 {
+  width: 50%;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+html,
+body {
+  height: 100%;
+  background: #efefef;
+}
+#header {
+  z-index: 999;
+  width: 100%;
+  background-color: #ff5511;
+  padding: 10px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+}
+#header .logo {
+  width: 55%;
+  max-height: 30px;
+}
+#header .download {
+  width: 34px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+#search {
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  background-color: #fff;
+  padding-right: 60px;
+  padding: 0 20px 10px 10px;
+}
+#search > input {
+  height: 30px;
+  width: 100%;
+  padding: 0 20px;
+  background-color: #f1f1f1;
+  margin-top: 5px;
+  border-radius: 15px 0 0 15px;
+}
+#search > button {
+  background-color: #ff5511;
+  border: none;
+  position: absolute;
+  width: 60px;
+  line-height: 30px;
+  right: 10px;
+  top: 5px;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 15px;
+}
+#main {
+  background-color: #fff;
+  padding-top: 95px;
+}
+#footer {
+  font-size: 12px;
+  height: 96px;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+}
+#footer .footer-top {
+  font-size: 14px;
+}
+#footer .footer-top .row {
+  border: 1px solid #ccc;
+  margin: 0;
+}
+#footer .footer-top .row .col-xs-7 {
+  padding: 0;
+}
+#footer .footer-top .row a {
+  border-right: 1px solid #ccc;
+  line-height: 34px;
+}
+#footer .footer-bottom {
+  padding-top: 15px;
+}
+#footer .footer-bottom a {
+  color: red;
+}
+#coupon_header {
+  z-index: 999;
+  background-color: #f4483e;
+  height: 44px;
+  width: 100%;
+  position: fixed;
+  color: white;
+  text-align: center;
+  top: 0px;
+}
+#coupon_header .back > a {
+  line-height: 44px;
+  font-size: 17px;
+  float: left;
+  color: white;
+  text-decoration: none;
+  margin-left: 6px;
+}
+#coupon_header > i {
+  font-size: 20px;
+  line-height: 44px;
+  font-weight: bold;
+}
+#coupon_header .download {
+  width: 50px;
+  height: 44px;
+  float: right;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  overflow: hidden;
+}
+#coupon_header .download > a > img {
+  width: 34px;
+}
+#main {
+  margin-top: -40px;
+  position: absolute;
+  width: 100%;
+}
+#main .remind {
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+  padding: 5px 0px;
+}
+#main > ul > li {
+  border-bottom: 1px solid #e7e7e7;
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+  margin-bottom: 10px;
+}
+#main > ul > li > a {
+  text-decoration: none;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 2px 10px;
+}
+#main > ul > li > a > img {
+  height: 80px;
+  float: left;
+  padding-right: 15px;
+  margin-top: 10px;
+}
+#main > ul > li > a .text {
+  padding-right: 30px;
+  overflow: hidden;
+  height: 100%;
+}
+#main > ul > li > a .text > h2 {
+  margin-top: 0;
+  font-size: 14px;
+  color: #333333;
+  height: 30px;
+  overflow: hidden;
+  line-height: 15px;
+}
+#main > ul > li > a .text > h3 {
+  font-size: 14px;
+  margin: 0;
+}
+#main > ul > li > a .text > span {
+  font-size: 12px;
+  color: #EE7700;
+  display: block;
+  margin-top: -10px;
+}
+#main > ul > li > a .text .rightarow {
+  position: absolute;
+  font-size: 18px;
+  right: 10px;
+  top: 50%;
+  color: #ccc;
+}
+.nav {
+  background: linear-gradient(to bottom, #fff, #ebebeb);
+  height: 38px;
+  width: 100%;
+  position: absolute;
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  padding-left: 8px;
+  font-size: 14px;
+  line-height: 36px;
+}
+.nav > i {
+  font-size: 8px;
+}
+.bespread {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: none;
+}
+.bespread .box {
+  position: absolute;
+  width: 200px;
+  height: 160px;
+  background-color: orange;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

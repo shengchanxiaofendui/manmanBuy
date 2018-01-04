@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>国内折扣</title>
+    <!-- 引入bootrap的css文件 -->
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+    <!-- 引入主页的less文件 -->
+    <link rel="stylesheet/less" href="./less/discountproduct.less">
+    <!-- 获取less.js 文件 -->
+    <script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <a href="./inlanddiscount.html" class="glyphicon glyphicon-menu-left icon-back"></a>
+        <h3>国内折扣</h3>
+        <img class="download" src="images/header_app.png" alt="">
+    </header>
+    <!-- 主体部分 -->
+    <main id="main">
+        <div class="container" id="productdetail">
+            <h3 class="title"> 越野佳品！Salomon S/Lab Sense Ultra 8 Set背包</h3>
+            <h4 class="pricetitle"> 969.15元包邮</h4>
+            <div class="info">
+                <span> 威骑中国</span>
+                <span> 01-02 19:31</span>
+                <span> 晓童 / 慢慢买</span>
+            </div>
+            <div class="content">
+                <div class="productimg">
+                    <img src="./images/ic_mall.png" alt="">
+                </div>
+                <div class="productinfo">
+                    <P>SALOMON萨洛蒙是1947年创建于法国阿尔卑斯山脉中心地带的全球户外运动品牌，设计制造各类专业的鞋类、服装、背包及各类滑雪器材。</P>
+                   
+                </div>
+            </div>
+            <div class="btn-buyit">
+                <a type="button" class="btn btn-warning ">前往购买</a>
+            </div>
+            <div class="discuss">
+                <p class="send-discuss"> 发表评论</p>
+                <form class="discuss-content">
+                    <textarea class="form-control" rows="3"></textarea>
+                    <div class="Postcomment clearfix">
+                        <button type="button" class="btn btn-warning"> 发表评论</button>
+                    </div>
+                </form>
+                <p class="comments">最新评论</p>
+                <!-- <div class=\ "tit\">\n 发表评论</div>\n
+                <div class=\ "reply\">\n
+                    <div class=\ "form\">\n
+                        <textarea name=\ "ctl00$ContentBody$txt_nr\" id=\ "ctl00_ContentBody_txt_nr\" rows=\ "3\"></textarea>\n
+                        <input name=\ "ctl00$ContentBody$lbl_fbr\" id=\ "ctl00_ContentBody_lbl_fbr\" value=\ "手机端网友58***74\" type=\
+                            "hidden\">\n
+                        <input name=\ "ctl00$ContentBody$hid_name\" id=\ "ctl00_ContentBody_hid_name\" value=\
+                            "opal 澳宝 沐浴露套装(经典滋润750ml*2瓶+薰衣草750ml)\" type=\ "hidden\">\n
+                        <div class=\ "ctrl\">\n
+                            <input name=\ "ctl00$ContentBody$Button1\" value=\ "发表评论\" id=\ "ctl00_ContentBody_Button1\" class=\ "tjdp\" type=\
+                                "submit\">\n </div>\n </div>\n </div>\n
+                <div class=\ "tit\" id=\ "newcomment\">\n 最新评论</div>\n
+                <div class=\ "list\">\n
+                    <ul>\n \n </ul>\n </div>" -->
+            </div>
+            <div class="Lable">
+                <span>标签:</span>
+                <span>Salomon</span>
+                <span>背包</span>
+            </div>
+        </div>
+    </main>
+    <section id="nav">
+        <a href="#">首页</a>
+        <a href="#">超值推荐</a>
+        <span> > 姗拉娜 sunrana ...</span>
+    </section>
+    <div id="appbanner">
+        <div class="logo clearfix">
+            <img src="./images/logo.png" alt="">
+        </div>
+        <div class="apptitle">
+            <h4> 慢慢买APP</h4>
+            <p>专注全网比价，每一次购物都在为你省钱！</p>
+        </div>
+        <div class="appdownload">
+            <a type="button" class="btn btn-primary">立即打开</a>
+        </div>
+    </div>
+    <!-- 底部内容 -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="row">
+                <div class="col-xs-7">
+                    <a class="col-xs-6" href="#">登录</a>
+                    <a class="col-xs-6" href="#">注册</a>
+                </div>
+    
+                <a href="#" class="col-xs-5">
+                    <i class="uparrow"></i>
+                    返回顶部</a>
+            </div>
+        </div>
+    <div class="footer-bottom">
+        <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="download">手机APP下载</a>
+        <span>慢慢买手机版-掌上比价平台</span>
+        <p>m.manmanbuy.com</p>
+        </div>
+    </footer>
+    <!-- 模板引擎 -->
+    <script type="text/html" id="discountproductTep" >
+        {{each result as value i}}
+         <div class="container" id="productdetail">
+            <h3 class="title">{{value.productName}}</h3>
+            <h4 class="pricetitle"> {{value.productPrice}}</h4>
+            <div class="info">
+                <span> {{value.productFrom}}</span>
+                <span>{{value.productTime}} </span>
+                <span>{{value.productTips}}</span>
+            </div>
+            <div class="content">
+                <div class="productimg">
+                    {{#value.productImg}}
+                </div>
+                <div class="productinfo">
+                    <P>{{value.productInfo}}</P>
+                </div>
+            </div>
+            <div class="btn-buyit">
+                <a type="button" class="btn btn-warning ">前往购买</a>
+            </div>
+            <div class="discuss">
+                {{#value.productComment}}
+            </div>
+            <div class="Lable">
+                <span>标签:</span>
+                <span>Salomon</span>
+                <span>背包</span>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <script src="./lib/artTemplate/template.js"></script>
+    <script src="./lib/jquery/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./js/discountproduct.js"></script>
+</body>
+
+</html>

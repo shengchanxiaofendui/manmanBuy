@@ -1,0 +1,88 @@
+@import 'base.less';
+// 优惠券头部区域
+html,
+body {
+    font-size: 16px;
+    background-color: #fff;
+}
+
+#coupon_header {
+    z-index: 999;
+    background-color: #f4483e;
+    height: 44px;
+    width: 100%;
+    position: fixed;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    .back>a {
+        line-height: 44px;
+        font-size: 17px;
+        float: left;
+        color: white;
+        text-decoration: none;
+        margin-left: 6px;
+    }
+    >i {
+        font-size: 20px;
+        line-height: 44px;
+        font-weight: bold;
+    }
+    .download {
+        width: 50px;
+        height: 44px;
+        float: right;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        overflow: hidden;
+        >a>img {
+            width: 34px;
+        }
+    }
+}
+
+// 优惠券区域
+#main {
+    margin-top: -30px;
+    width: 100%;
+    font-size: 0;
+    position: relative;
+    #coupons {
+        padding-bottom: 35px;
+        .one {
+            .everycoupon {
+                border: 1px solid #ccc;
+                height: 100px;
+                padding: 0 2px;
+                text-align: center;
+                width: 100px;
+                margin-top: 20px;
+                >a {
+                    >img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    } // 
+    .nav {
+        background: linear-gradient(to bottom, #fff, #ebebeb);
+        height: 38px;
+        width: 100%;
+        position: absolute;
+        border-top: solid 1px #ebebeb;
+        border-bottom: 1px solid #ccc;
+        padding-left: 8px;
+        font-size: 14px;
+        line-height: 36px;
+        >i {
+            font-size: 8px;
+        }
+    }
+}
+
+#footer {
+    margin-top: 65px;
+    background-color: #eee;
+}

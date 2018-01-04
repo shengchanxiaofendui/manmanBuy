@@ -1,0 +1,276 @@
+/* 开发的时候写* 上线的时候可以网上找初始化代码吧所有标签拷过来 */
+* {
+  margin: 0px;
+  padding: 0px;
+  /* 在移动端不允许出现横向滚动条的不能让padding或者border撑大盒子 */
+  box-sizing: border-box;
+  /*  清除移动端点击（按住）高亮颜色 */
+  -webkit-tap-highlight-color: transparent;
+}
+a {
+  text-decoration: none;
+  color: #666;
+}
+li {
+  list-style: none;
+}
+i,
+em {
+  font-style: normal;
+}
+input {
+  /* 内边框  点击输出框出来的边框*/
+  outline: 0;
+  /* 外边框 */
+  border: 0;
+}
+img {
+  /* 设置图片对齐方式和文字一样解决图片3px的间隙的问题 */
+  vertical-align: middle;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: normal;
+}
+/* 公共样式 */
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.w50 {
+  width: 50%;
+}
+.bl {
+  border-left: 1px solid #ccc;
+}
+.bt {
+  border-top: 1px solid #ccc;
+}
+.bb {
+  border-bottom: 1px solid #ccc;
+}
+.br {
+  border-right: 1px solid #ccc;
+}
+html,
+body {
+  height: 100%;
+  background: #efefef;
+}
+#header {
+  z-index: 999;
+  width: 100%;
+  background-color: #ff5511;
+  padding: 10px;
+  height: 50px;
+  position: fixed;
+  top: 0;
+}
+#header .logo {
+  width: 55%;
+  max-height: 30px;
+}
+#header .download {
+  width: 34px;
+  position: absolute;
+  top: 8px;
+  right: 10px;
+}
+#search {
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  background-color: #fff;
+  padding-right: 60px;
+  padding: 0 20px 10px 10px;
+  z-index: 99;
+}
+#search > input {
+  height: 30px;
+  width: 100%;
+  padding: 0 20px;
+  background-color: #f1f1f1;
+  margin-top: 5px;
+  border-radius: 15px 0 0 15px;
+}
+#search > button {
+  background-color: #ff5511;
+  border: none;
+  position: absolute;
+  width: 60px;
+  line-height: 30px;
+  right: 10px;
+  top: 5px;
+  padding: 0;
+  font-size: 16px;
+  border-radius: 15px;
+}
+#main {
+  background-color: #fff;
+  padding-top: 95px;
+}
+#footer {
+  font-size: 12px;
+  height: 96px;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+  width: 100%;
+}
+#footer .footer-top {
+  font-size: 14px;
+}
+#footer .footer-top .row {
+  border: 1px solid #ccc;
+  margin: 0;
+}
+#footer .footer-top .row .col-xs-7 {
+  padding: 0;
+}
+#footer .footer-top .row a {
+  border-right: 1px solid #ccc;
+  line-height: 34px;
+}
+#footer .footer-bottom {
+  padding-top: 15px;
+}
+#footer .footer-bottom a {
+  color: red;
+}
+#header {
+  position: static;
+  width: 100%;
+  background-color: #ff841d;
+  margin: 0;
+}
+#header > a {
+  margin-top: 5px;
+  float: left;
+  color: #fff;
+}
+#header > h1 {
+  height: 20px;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  margin-top: 5px;
+  float: left;
+  text-align: center;
+}
+#header > div {
+  width: 50px;
+  height: 44px;
+}
+#header > div > img {
+  margin-top: 5px;
+  float: left;
+  display: block;
+  width: 32px;
+}
+#cxdiv > ul > li {
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  height: 110px;
+  position: relative;
+}
+#cxdiv > ul > li > a {
+  display: inline-block;
+  height: 128px;
+}
+#cxdiv > ul > li > a .pic {
+  width: 110px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#cxdiv > ul > li > a .pic > img {
+  height: 100px;
+}
+#cxdiv > ul > li > a .info {
+  width: auto;
+  margin-left: 100px;
+}
+#cxdiv > ul > li > a .info .title {
+  font-size: 15px;
+}
+#cxdiv > ul > li > a .info .title > span {
+  color: red;
+}
+#cxdiv > ul > li > a .info .other {
+  margin-top: 5px;
+}
+#cxdiv > ul > li > a .info .other .mall {
+  font-size: 12px;
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+}
+#cxdiv > ul > li > a .info .other .comment {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+#section {
+  position: relative;
+  width: 100%;
+  height: 34px;
+}
+#section .top-page {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  border: 1px solid#d4d4d4;
+  padding: 8px 20px 8px 20px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  left: 0px;
+  top: 0;
+}
+#section .select {
+  width: auto;
+  margin: 0 100px;
+  height: 40px;
+}
+#section .select > select {
+  height: 100%;
+  width: 100%;
+}
+#section .bottom-page {
+  width: 100px;
+  height: 40px;
+  padding: 15px;
+  border: 1px solid#d4d4d4;
+  padding: 8px 20px 8px 20px;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#f1f1f1), to(#d4d4d4));
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+#nav {
+  background: linear-gradient(to bottom, #fff, #ccc);
+  height: 36px;
+  margin-top: 20px;
+}
+#nav > a {
+  float: left;
+  display: block;
+  margin-top: 8px;
+}
+#nav > span {
+  margin-top: 8px;
+  display: inline-block;
+}
+#footer {
+  margin-bottom: 0px;
+}

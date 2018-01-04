@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>凑单品</title>
+	<!-- 引入bootstrap.css -->
+	<link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
+	<!-- 引入字体图标 -->
+	<!-- <link rel="stylesheet" href="./lib/bootstrap/fonts/"> -->
+	<!-- 引入less -->
+	<link rel="stylesheet/less" href="./less/addProducts.less">
+	<!-- 引入less编译器 -->
+	<script src="./lib/less/less.js"></script>
+</head>
+
+<body>
+	<header id="header">
+		<a href="#" class="glyphicon glyphicon-chevron-left"></a>
+		<h3>凑单品</h3>
+	</header>
+	<main id="main">
+
+		<!-- 主体头部 -->
+		<div class="products-top">
+			<div class="select">
+				<ul class="clearfix">
+					<li class="shopName">
+						<a href="#" data-id="0">京东
+							<i class="glyphicon glyphicon-menu-down"></i>
+						</a>
+					</li>
+					<li class="area">
+						<a href="#" data-id="0">华北
+							<i class="glyphicon glyphicon-menu-down"></i>
+						</a>
+					</li>
+					<li>
+						<a href="#">全部价格
+							<i class="glyphicon glyphicon-menu-down"></i>
+						</a>
+					</li>
+				</ul>
+				<div class="search"></div>
+			</div>
+
+			<!-- <div class="select">
+				<div class="btn-group">
+					<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Action
+						<span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="#">Action</a>
+						</li>
+						<li>
+							<a href="#">Another action</a>
+						</li>
+						<li>
+							<a href="#">Something else here</a>
+						</li>
+						<li role="separator" class="divider"></li>
+						<li>
+							<a href="#">Separated link</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="search"></div>
+			</div> -->
+		</div>
+
+		<div class="options">
+			<!-- 选择内容 -->
+			<div class="shopName-options">
+				<ul>
+					<li>
+						<a href="#">天猫</a>
+					</li>
+					<li>
+						<a href="#">淘宝</a>
+					</li>
+					<li>
+						<a href="#">京东</a>
+					</li>
+				</ul>
+			</div>
+			<!-- 选择内容 -->
+			<div class="area-options">
+				<ul>
+					<li>
+						<a href="#">天猫</a>
+					</li>
+					<li>
+						<a href="#">淘宝</a>
+					</li>
+					<li>
+						<a href="#">京东</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 主体内容 -->
+		<div class="products-body">
+			<div class="row">
+				<div class="col-xs-6">
+					<a href="#">
+						<img src="./images/ic_bcj.png" alt="">
+						<p>这是一个寂寞的天, 下着有些伤心的雨</p>
+						<span>￥1.00</span>
+					</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="#">
+						<img src="./images/ic_bcj.png" alt="">
+						<p>这是一个寂寞的天, 下着有些伤心的雨</p>
+						<span>￥1.00</span>
+					</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="#">
+						<img src="./images/ic_bcj.png" alt="">
+						<p>这是一个寂寞的天, 下着有些伤心的雨</p>
+						<span>￥1.00</span>
+					</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="#">
+						<img src="./images/ic_bcj.png" alt="">
+						<p>这是一个寂寞的天, 下着有些伤心的雨</p>
+						<span>￥1.00</span>
+					</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="#">
+						<img src="./images/ic_bcj.png" alt="">
+						<p>这是一个寂寞的天, 下着有些伤心的雨</p>
+						<span>￥1.00</span>
+					</a>
+				</div>
+				<div class="col-xs-6">
+					<a href="#">
+						<img src="./images/ic_bcj.png" alt="">
+						<p>这是一个寂寞的天, 下着有些伤心的雨</p>
+						<span>￥1.00</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+	</main>
+</body>
+<!-- 商店名称和区域模版 -->
+<script id="optionTmp" type="text/html">
+	{{each result as value i}}
+	<li>
+		{{if value.shopName}}
+		<a href="#" data-shopId={{value.shopId}}>{{value.shopName}}</a>
+		{{/if}} 
+		{{if value.areaName}}
+		<a href="#" data-areaId={{value.areaId}}>{{value.areaName}}</a>
+		{{/if}}
+	</li>
+	{{/each}}
+</script>
+<!-- 商品列表 -->
+<script id="shopTmp" type="text/html">
+	{{each result as value i}}
+	<div class="col-xs-6">
+		<a href="#">
+			<img src="{{value.productImg}}" alt="">
+			<p>{{value.productName}}</p>
+			<span>{{value.productPrice}}</span>
+		</a>
+	</div>
+	{{/each}}
+</script>
+<!-- 引入jquery -->
+<script src="./lib/jquery/jquery.js"></script>
+<!-- 引入bootsstrap.js -->
+<script src="./lib/bootstrap/js/bootstrap.js"></script>
+<!-- 模版引擎 -->
+<script src="./lib/artTemplate/template.js"></script>
+<!-- 引入addProduct.js -->
+<script src="./js/addProducts.js"></script>
+
+</html>

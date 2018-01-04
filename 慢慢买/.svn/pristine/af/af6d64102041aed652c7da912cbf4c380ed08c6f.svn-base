@@ -1,0 +1,168 @@
+@import 'base.less';
+html, body {
+    background-color: #f2f2f2;
+}
+#footer {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+#main {
+    background-color: #f2f2f2;
+    .product-detail {
+        background-color: #fff;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        h4 {
+            background-color: #f5f5f5;
+            font-size: 14px;
+            line-height: 38px;
+            padding-left: 10px;
+            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+        .content {
+            padding: 0 20px;
+            text-align: center;
+            img {
+                vertical-align: middle;
+            }
+            p {
+                margin-top: 20px;
+                font-size: 16px;
+                text-align: left;
+            }
+            span {
+                text-align: left;
+                display: inline-block;
+                width: 50%;
+                color: #777777;
+            }
+        }
+    }
+
+    .bijia {
+        background-color: #fff;
+        .row {
+            margin: 0;
+            height: 30px;
+            line-height: 30px;
+            // background-color: rgba(255, 85, 17,0.8);
+            text-align: center;
+        }
+        .title {  
+            background-color: #ffbb00;
+            background: -webkit-gradient(linear,0 0,0 100%,from(#ffa632),to(#ff5511));
+            color: white;
+            border-top: 1px solid red;
+            box-shadow: 0 0 5px red;
+            >div {
+                border-right: 1px solid red;
+            }  
+        }
+        .commen-tabs {
+            background-color: #eee;
+            color: #666;
+            height: 36px;
+            // line-height: 40px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            >div {
+                >span {
+                    display: inline-block;
+                    padding: 0 5px;
+                    height: 35px;
+                    line-height: 35px;
+                    &.active {
+                        border-bottom: 1px solid @main-color;
+                    }
+                }
+            }
+            img {
+                position: absolute;
+                width: 8px;
+                height: 5px;
+                top: -1px;
+                right: 150px;
+            } 
+        }
+        .commensList {
+            font-size: 14px;
+             padding: 15px;
+            .commenItem {
+                padding-bottom: 20px;
+                .first {
+                    font-size: 12px;
+                    margin: 0;
+                    color: #666;
+                }
+                .second {
+                    font-size: 12px;
+                    margin: 0;
+                    color: #666;
+                    >i {
+                        embed {
+                            float: left;
+                        }
+                    }
+                }
+                .commen-content {
+                    margin: 10px 0;
+                    color: black;
+                }
+                .reply {
+                    margin: 8px 0;
+                    color: #666;
+                    font-size: 12px;
+                }
+            }
+        }
+        .banner {
+            padding: 10px;
+            border-top: 1px solid #aaa;
+            border-bottom: 1px solid #aaa;
+            >a {
+                >img {
+                    width: 100%;
+                }
+            }
+            .download {
+                height: 30px;
+                margin: 0 6px;
+                .pull-left {
+                    line-height: 40px;
+                    color: @main-color;
+                    text-decoration: underline;
+                }
+                >button {
+                    float: right;
+                    background-color: @main-color;
+                    width: 78px;
+                    height: 29px;
+                    margin-top: 5px;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 12px;  
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+
+    .getmore {
+        margin-top: 20px;
+        padding: 0 8px;
+        background-color: #f2f2f2;
+        a {
+            display: block;
+            width: 100%;
+            background-color: #d4d4d4;
+            background: -webkit-gradient(linear,0 0,0 100%,from(#f1f1f1),to(#d4d4d4)); 
+            text-align: center;
+            height: 33px;
+            line-height: 33px;
+            box-shadow: 0 0 1px #666;
+        }
+    }
+}

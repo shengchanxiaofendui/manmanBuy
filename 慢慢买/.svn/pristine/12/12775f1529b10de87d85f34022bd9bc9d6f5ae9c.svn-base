@@ -1,0 +1,32 @@
+1. 各成员负责页面
+
+一 首页   index.html
+张志宇
+
+二 比价搜索  listclass.html
+胡娟
+
+三 省钱控页面 cuxiao.html
+邵营
+
+四 国内折扣  guoneizhekou.html
+王家辉
+
+五 白菜价页面  baicai.html
+邹志华
+
+六 海淘折扣页面  haitao.html
+欧阳金鹏
+
+七 优惠券页面  quanindex.html
+韩淑媛
+
+八 凑单品页面 coudanlist.html
+
+九 商城导航页面 hzsite.html 
+张志宇
+
+十 品牌大全 top10.html
+曾婉怡
+
+2. 除了index.html页面  其他的页面均放入pages文件里面 

@@ -1,0 +1,122 @@
+/* 开发的时候写* 上线的时候可以网上找初始化代码吧所有标签拷过来 */
+@main-color:#ff5511;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /* 在移动端不允许出现横向滚动条的不能让padding或者border撑大盒子 */
+    box-sizing: border-box;
+    /*  清除移动端点击（按住）高亮颜色 */
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+li {
+    list-style: none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+input {
+    /* 内边框  点击输出框出来的边框*/
+    outline: 0;
+    /* 外边框 */
+    border: 0;
+}
+
+img {
+    /* 设置图片对齐方式和文字一样解决图片3px的间隙的问题 */
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: normal;
+}
+
+
+/* 公共样式 */
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.w50{
+    width: 50%;
+}
+
+.bl{
+    border-left: 1px solid #ccc;
+}
+.bt{
+    border-top: 1px solid #ccc;
+}
+.bb{
+    border-bottom: 1px solid #ccc;
+}
+.br{
+    border-right: 1px solid #ccc;
+}
+
+#header{
+    background-color: @main-color;
+    padding: 15px;
+    height: 50px;
+    .logo{
+        width: 55%;
+    }
+    .download {
+        width: 34px;
+        position: absolute;
+        top: 8px;
+        right: 10px;
+    }
+}
+
+#search {
+    padding-right: 60px;
+    position: relative;
+    padding: 0 20px 0 10px;
+    margin: 5px auto;
+    >input {
+        height: 30px;
+        width: 100%;
+        padding: 0 20px;
+        background-color: #f1f1f1;
+        margin-top: 5px;
+        border-radius: 15px 0 0 15px;
+    }
+    >button {
+        background-color: @main-color;
+        border: none;
+        position: absolute;
+        width: 60px;
+        line-height: 30px;
+        right: 10px;
+        top: 5px;
+        padding: 0;
+        font-size: 16px;
+        border-radius: 15px;
+    }
+}

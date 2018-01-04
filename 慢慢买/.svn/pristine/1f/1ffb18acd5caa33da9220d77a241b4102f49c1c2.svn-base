@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'>
+    <title>title</title>
+     <!-- 引入bootrap的css文件 -->
+     <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+     <!-- 引入主页的less文件 -->
+     <link rel="stylesheet/less" href="../less/base.less">
+     <link rel="stylesheet/less" href="../less/prolist.less">
+     <!-- 引入less.js编译器 -->
+     <script src="../lib/less/less.js"></script>
+</head>
+<body>
+
+        <header id="header">
+                <img class="logo" src="../images/header_logo.png" alt="">
+                <img class="download" src="../images/header_app.png" alt="">
+        </header>
+        <section id="search">
+                <input type="search" placeholder="请输入你想比价的商品">
+                <button class="btn btn-danger">搜索</button>
+        </section>
+
+        <main id="main">
+                <div class="title">
+                     <div class="row nav nav-tabs" role="tablist">
+                        <div role="presentation" class="active">
+                            <a href="#home" class="col-xs-3 active" data-toggle="tab" role="tab">综合</a>
+                        </div>
+                        <div role="presentation">
+                            <a href="#sales" class="col-xs-3" data-toggle="tab" role="tab">销量</a>
+                        </div>
+                        <div role="presentation">
+                            <a href="#price" class="col-xs-3" data-toggle="tab" role="tab">价格</a>
+                        </div>
+                        <div role="presentation">
+                            <a href="#selected" class="col-xs-3" data-toggle="tab" role="tab">
+                                <i class="glyphicon glyphicon-filter"></i>    
+                                        筛选
+                            </a>
+                        </div>   
+                     </div>
+                </div>
+                <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="home">
+                            <div class="productlist"></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="sales">销量排行木有数据咯</div>
+                        <div role="tabpanel" class="tab-pane" id="price">价格排行木有数据咯</div>
+                        <div role="tabpanel" class="tab-pane" id="selected">筛选排行木有数据咯</div>
+                      </div>
+                
+                <nav id="nav" aria-label="Page navigation">
+                    <div class="pagination">
+                        <a href="#" class="previous selection " aria-label="Previous">
+                          <span class="glyphicon glyphicon-menu-left"></span>
+                        </a>
+                        <select class="selectionlist">
+                        </select>
+                        <a href="#" class="next selection" aria-label="Next">
+                          <span class="glyphicon glyphicon-menu-right"></span>
+                        </a>
+                    </div>
+                </nav>
+               
+            </main>
+
+
+
+
+        <!-- <main id="main">
+            <div class="title">
+                 <div class="row">
+                     <a href="#" class="col-xs-3 active">综合</a>
+                     <a href="#" class="col-xs-3">销量</a>
+                     <a href="#" class="col-xs-3">价格</a>
+                     <a href="#" class="col-xs-3">
+                        <i class="glyphicon glyphicon-filter"></i>    
+                        筛选
+                    </a>
+                 </div>
+            </div>
+            <div class="productlist">
+                <div class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" src="../images/gengduo.png" alt="...">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">Media heading</h4>
+                      Lorem ipsum dolor sit amet excepturi numquam accusantium quaerat corrupti, provident sint rerum mollitia dolore!
+                    </div>
+                </div>
+            </div>
+            <nav id="nav" aria-label="Page navigation">
+                <div class="pagination">
+                    <a href="#" class="previous selection " aria-label="Previous">
+                      <span class="glyphicon glyphicon-menu-left"></span>
+                    </a>
+                    <select class="selectionlist">
+                    </select>
+                    <a href="#" class="next selection" aria-label="Next">
+                      <span class="glyphicon glyphicon-menu-right"></span>
+                    </a>
+                </div>
+              </nav>
+           
+        </main> -->
+       
+        <footer id="footer">
+                <div class="footer-top">
+                        <div class="row clearfix">
+                            <div class="col-xs-7">
+                                    <a class="col-xs-6" href="#">登录</a>
+                                    <a class="col-xs-6" href="#">注册</a>
+                            </div>
+                        
+                            <a href="#" class="col-xs-5">
+                            <i class="uparrow"></i> 
+                            返回顶部</a>
+                        </div>
+                </div>
+                <div class="footer-bottom">
+                    <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia" class="download">手机APP下载</a>
+                    <span>慢慢买手机版-掌上比价平台</span>
+                    <p>m.manmanbuy.com</p>
+                </div>
+        </footer>
+
+        <div id="app-promotion-bar"> 
+                <a class="closefix" href="javascript:;"></a>
+                <div class="icon"></div>
+                <p class="titlefix">慢慢买</p>
+                <p class="describe ">你的随身购物助手！</p>
+                <a class="download-btn" href="http://m.manmanbuy.com/app.html?type=foot_Prolistaspx_id_4&amp;value=wapfoot" onclick="trackEvent('底部悬浮下载');">立即打开</a> 
+            </div>
+    
+    <script type="text/html" id="categorydetailList">
+        {{each result}}
+            <div class="media">
+                    <a href="./bijia.html?productId={{$value.productId}}" class="goto"></a>
+                    <div class="media-left">
+                        {{#$value.productImg}}
+                    </div>
+                    <div class="media-body">
+                        <h4 class="media-heading">{{$value.productName}}</h4>
+                        <p>{{$value.productPrice}}</p>
+                        <span class="pull-left">{{$value.productQuote}}</span>
+                        <a href="./bijia.html?productId={{$value.productId}}" class="pull-right" href="#">{{$value.productCom}}</a>
+                    </div>
+            </div>
+           
+        {{/each}}
+    </script>
+    <script src="../lib/jquery/jquery.min.js"></script>
+    <script src="../lib/artTemplate/template.js"></script>
+    <script src="../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src='../lib/Pagination/jquery.twbsPagination.js'></script>
+    <script src="../js/prolist.js"></script>
+</body>
+</html>

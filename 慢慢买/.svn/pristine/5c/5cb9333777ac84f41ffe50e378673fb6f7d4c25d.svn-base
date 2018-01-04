@@ -1,0 +1,141 @@
+@import 'base.less';
+// 优惠券头部区域
+
+#coupon_header {
+    z-index: 999;
+    background-color: #f4483e;
+    height: 44px;
+    width: 100%;
+    position: fixed;
+    color: white;
+    text-align: center;
+    top: 0px;
+    .back>a {
+        line-height: 44px;
+        font-size: 17px;
+        float: left;
+        color: white;
+        text-decoration: none;
+        margin-left: 6px;
+    }
+    >i {
+        font-size: 20px;
+        line-height: 44px;
+        font-weight: bold;
+    }
+    .download {
+        width: 50px;
+        height: 44px;
+        float: right;
+        position: absolute;
+        top: 6px;
+        right: 6px;
+        overflow: hidden;
+        >a>img {
+            width: 34px;
+        }
+    }
+}
+
+// 优惠券详细部分
+#main {
+    margin-top: -40px;
+    position: absolute;
+    width: 100%;
+    .remind {
+        font-size: 12px;
+        text-align: center;
+        color: #999;
+        padding: 5px 0px;
+    }
+    >ul>li {
+        border-bottom: 1px solid #e7e7e7;
+        position: relative;
+        overflow: hidden;
+        height: 100px;
+        margin-bottom: 10px;
+        // line-height: 100px;
+        >a {
+            text-decoration: none;
+            display: inline-block;
+            height: 100%;
+            width: 100%;
+            padding: 2px 10px;
+            >img {
+                // width: 100px;
+                height: 80px;
+                float: left;
+                // margin-top: 36px;
+                padding-right: 15px;
+                margin-top: 10px;
+            }
+            .text {
+                padding-right: 30px;
+                overflow: hidden;
+                height: 100%;
+                >h2 {
+                    // margin-top: 10px;
+                    margin-top: 0;
+                    font-size: 14px;
+                    color: #333333;
+                    // font-weight: normal;
+                    height: 30px;
+                    overflow: hidden;
+                    line-height: 15px;
+                }
+                >h3 {
+                    font-size: 14px;
+                    // margin-top: 10px;
+                    margin: 0;
+                }
+                >span {
+                    font-size: 12px;
+                    color: #EE7700;
+                    display: block;
+                    margin-top: -10px;
+                }
+                .rightarow {
+                    position: absolute;
+                    font-size: 18px;
+                    right: 10px;
+                    top: 50%;
+                    color: #ccc;
+                }
+            }
+        }
+    }
+}
+
+.nav {
+    background: linear-gradient(to bottom, #fff, #ebebeb);
+    height: 38px;
+    width: 100%;
+    position: absolute;
+    border-top: solid 1px #ebebeb;
+    border-bottom: 1px solid #ccc;
+    padding-left: 8px;
+    font-size: 14px;
+    line-height: 36px;
+    >i {
+        font-size: 8px;
+    }
+}
+
+// 点击优惠券信息展示图片
+.bespread {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 999;
+    display: none;
+    .box {
+        position: absolute;
+        width: 200px;
+        height: 160px;
+        background-color:orange;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

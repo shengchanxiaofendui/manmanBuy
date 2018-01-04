@@ -1,0 +1,37 @@
+$(function(){
+    // console.log(categoryid);
+    //请求列表数据
+    $.ajax({
+        url: 'http://127.0.0.1:9090/api/getcategorytitle',
+        datatype: 'json',
+        success: function(data) {
+            var html= template('getcategorytitleTmp',data);
+            $('#main .productlist').html(html);
+        }
+    })
+    //手风琴调用
+    $('.collapse').collapse();
+
+    //点击按钮关闭底部下载框
+    $('.closefix').click(function(){
+        $('#app-promotion-bar').css('display','none');
+    })
+
+    // 点击加载详情列表
+    $('#main .productlist').on('click','.product-item',function(){
+        var titleid = $(this).data('value');
+        $(this).find('i').toggleClass('glyphicon-menu-up');
+        $.ajax({
+            url: 'http://127.0.0.1:9090/api/getcategory',
+            data: {
+                titleid: titleid  
+            },
+            datatype: 'json',
+            success: function(data) {
+                var html = template('getcategoryListTmp',data);
+                $('.panel-collapse .row').html(html);
+            }
+        })
+    })
+    
+})
